@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../css/estructuras.css">
+    <link rel="stylesheet" href="../css/estilos.css">
+    <link rel="icon" href="../img/logo.png" type="image/x-icon">
+    
+    
+    <title>Document</title>
+</head>
+<body>
+    <nav>
+        <ul class="iconos">
+            <li><img src="../img/menu.png" alt="menu" class="icon2" id="menuIcon"></li>
+            <li><img src="../img/logo.png" alt="logo" class="icon"></li>
+            <li><img src="../img/modo-nocturno.png" alt="nocturno" class="icon2" id="nocturno"></li>
+        </ul>
+        <ul class="nav-list" id="navList">
+            <li><a href="#Proyectos">Proyectos</a></li>
+            <li><a href="#Noticias">Noticias</a></li>
+            <li><a href="#Contáctanos">Contáctanos</a></li>
+        </ul>
+    </nav>
+<!-- -------------------------------------------------------------------------------------------------------- -->
+
+
+    <main>
+        <section id="section1">
+            <h1 class="titulo_principal"> DESARROLLA VIDEOJUEGOS EN 3D Y REALIDAD VIRTUAL!</h1>
+            <img src="../img/princ.png" alt="gafasRV">
+        </section>
+
+        <section class="seccion_normal">
+            <h1 class="titulo" id="Proyectos">> Proyectos</h1>
+            <p>Aquí puedes algunos de los proyectos realizados por nuestro alumnado. ¿A qué esperas a crear los tuyos? ;) </p>
+            <div class="tarjetas">
+                <div class="tarjeta">
+                    <img src="../img/rvirtual.jpg" alt="imagen">
+                    <div class="textoTarjeta">
+                        <h1>Zombies</h1>
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Commodi reprehenderit dolor dolorum nemo. Nemo deleniti itaque cum repudiandae. Ducimus, veritatis.</p>
+                    </div>
+                </div>
+                <div class="tarjeta">
+                    <img src="../img/coche.jpg" alt="imagen">
+                    <div class="textoTarjeta">
+                        <h1>Coches</h1>
+                        <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Quod, error?</p>
+                    </div>
+                </div>
+                <div class="tarjeta">
+                    <img src="../img/arboles.jpg" alt="imagen">
+                    <div class="textoTarjeta">
+                        <h1>Árboles</h1>
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Commodi reprehenderit dolor dolorum nemo. Nemo deleniti itaque cum repudiandae. Ducimus, veritatis.</p>
+                    </div>
+                </div>
+                <div class="tarjeta">
+                    <img src="../img/mueble.jpeg" alt="imagen">
+                    <div class="textoTarjeta">
+                        <h1>Muebles</h1>
+                        <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Aspernatur libero a corporis quia repudiandae. Vitae aspernatur inventore veritatis ex animi.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+
+        <section class="seccion_normal">
+            <h1 class="titulo" id="Noticias">> Noticias</h1>
+            <p class="textoNoticias">¡Aquí encontrarás información interesante sobre nuestro curso, proyecto, alumnos, docentes y mucho más!</p>
+
+            <div class="noticia">
+                <img src="../img/ambulancia.jpeg" alt="mueble">
+                <p class="contenido">
+                    El curso de especialización de IES María Enriquez está participando en el diseño de ambulancias.
+                </p>
+            </div>
+            <div class="noticia">
+                <img src="../img/brazo.jpeg" alt="mueble">
+                <p class="contenido">
+                    Nueva participación en el diseño de prototipos biónicos de la Universisad Politécnica de Valencia.
+                </p>
+            </div>
+        </section>
+
+
+        <section class="seccion_normal">
+            <h1 class="titulo" id="Contáctanos">> Contáctanos</h1>
+            <div class="formulario">
+                <h2>Ponte en contacto</h2>
+                <label for="nombre">Nombre</label>
+                <br>
+                <input type="text">
+                <br>
+
+                <label for="email">Email</label>
+                <br>
+                <input type="text" placeholder="Ej: usuario@gmail.com">
+                <br>
+
+                <label for="mensaje">Mensaje</label>
+                <br>
+                <textarea name="mensaje" id="mensaje" cols="30" rows="10"></textarea>
+            </div>
+        </section>
+    </main>
+
+
+<!-- -------------------------------------------------------------------------------------------------------- -->
+
+
+
+    <footer>
+        <small><a href="#">Política legal</a></small>
+        <a href="#"><img src="../img/instagram.jpg" alt="instagram"></a>
+    </footer>
+</body>
+</html>
+<script>
+    let i=0;
+    document.getElementById('menuIcon').addEventListener('click', function() {
+    document.getElementById('navList').classList.toggle('show-nav');
+});
+document.querySelectorAll('.nav-list li').forEach(function(item) {
+    item.addEventListener('click', function() {
+        document.getElementById('navList').classList.remove('show-nav');
+    });
+});
+document.getElementById('nocturno').addEventListener('click', function() {
+    if(i==0){
+        document.body.style.backgroundColor = '#191919';
+        document.body.style.color = 'white';
+        document.getElementsByTagName('nav')[0].style.backgroundColor = 'gray';
+        document.getElementsByTagName('footer')[0].style.backgroundColor = 'gray';
+        document.querySelectorAll('.titulo').forEach(function(item) {
+            item.style.color = 'cyan';
+        });
+        i=1;
+    }else{
+    document.body.style.backgroundColor = 'white';
+    document.body.style.color = 'black';
+    document.getElementsByTagName('nav')[0].style.backgroundColor = 'white';
+    document.getElementsByTagName('footer')[0].style.backgroundColor = 'white';
+    document.querySelectorAll('.titulo').forEach(function(item) {
+            item.style.color = "rgb(0, 4, 255)";
+        });
+    i=0;
+    }
+});
+</script>

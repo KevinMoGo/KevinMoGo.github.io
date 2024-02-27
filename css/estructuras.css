@@ -1,0 +1,349 @@
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Sora:wght@100..800&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    
+}
+
+
+/* NAV ---------------------------------------- */
+nav {
+    top: 0;
+    background-color: white;
+    min-height: 4.5rem;
+    display: flex;
+    align-items: center;
+    position: fixed;
+    width: 100%;
+    z-index: 1000;
+}
+section > p{
+    margin-top: 3rem;
+    font-family: 'Sora', sans-serif;
+    letter-spacing: 2px;
+    font-size: 1.2rem;
+    text-align: left;
+}
+.titulo_principal{
+    color: rgb(3, 213, 255);
+    text-shadow: 0px 2px 20px cyan;
+    text-align: center;
+    letter-spacing: 3px;
+    font-size: 2.5rem;
+    font-family: "Sora";
+}
+.titulo{
+    color: rgb(0, 4, 255);
+    font-family: consolas;
+    font-size: 2rem;
+}
+.iconos{
+    display: flex;
+    justify-content: space-around;
+    width: 100%;
+    list-style: none;
+}
+
+
+.nav-list {
+    list-style: none;
+    display: flex;
+    align-items: left;
+    height: 100%;
+    margin-left: 5rem;
+}
+
+.icon {
+    width: 3.5rem;
+}
+
+.icon2 {
+    margin-top: 1rem;
+    width: 2rem;
+}
+
+.icon2:active {
+    transform: scale(0.9);
+}
+
+.nav-list {
+    position: fixed;
+    top: 0;
+    left: -100%;
+    width: 80vw;
+    height: 100vh;
+    background-color: white;
+    flex-direction: column;
+    transition: transform 0.3s ease-in-out;
+}
+
+.nav-list li {
+    padding: 1rem;
+    border-bottom: 1px solid #ccc;
+}
+.nav-list li a {
+    color: black;
+    text-decoration: none;
+    font-size: 1.5rem;
+    font-family: "Sora";
+}
+
+.show-nav {
+    transform: translateX(100%);
+}
+
+#Proyectos, #Noticias, #Contáctanos {
+    scroll-margin-top: 4.5rem;
+
+}
+
+/* FOOTER ------------------------------------------- */
+footer {
+    background-color: white;
+    min-height: 4rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+
+}
+
+footer small a{
+    color: black;
+    text-decoration: none;
+    font-family: "Sora";
+    font-size: 1rem;
+
+}
+footer img{
+    width: 2rem;
+    float: right;
+}
+
+/* MAIN ---------------------------------------------- */
+/* mdoelo de contenedores de secciones */
+
+/* hacemos la primera seccion un poco mas pequeña para que el padding no cree un espacio demasiado grande al momento de deslizar a la segunda sección */
+#section1{
+    margin-top: 4.5rem;
+    min-height: calc(100vh - 8.5rem);
+    position: relative;
+}
+#section1 img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    mask: linear-gradient(to top, transparent 0%, black 100%);
+}
+
+
+section{
+    min-height: calc(100vh - 4rem);
+    padding: 1rem;
+}
+
+
+.tarjetas{
+    
+    gap: 1.2rem;
+    display: flex;
+    scroll-snap-type: x mandatory;
+    overflow-x: auto;
+    width: 100%;
+}
+
+
+.tarjeta{
+    scroll-snap-align: start;
+    scroll-snap-stop: always;
+    scroll-snap-align: center;
+    min-width: 20rem;
+    margin: 0 auto;
+    margin-top: 4rem;
+    border-radius: 1rem 1rem 1rem 1rem;
+}
+
+
+.tarjeta img{
+    width: 100%;
+    height: 13rem;
+    border-radius: 10px 10px 0 0;
+}
+
+.textoTarjeta{
+    padding: 1rem;
+    background-color: rgb(0, 0, 92);
+    color: white;
+    font-family: "Sora";
+    border-radius: 0 0 10px 10px;
+    min-height: 20rem;
+}
+.textoTarjeta > h1{
+    font-size: 1.5rem;
+    margin-bottom: 1.5rem;
+}
+.textoTarjeta > p{
+    font-size: 1.2rem;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+.textoNoticias{
+    margin-bottom: 3rem;
+}
+
+.noticia{
+    margin-bottom: 2rem;
+    width: 100%;
+    
+}
+.noticia img{
+    width: 100%;
+    height: 10rem;
+    border-radius: 10px 10px 0 0;
+    max-height: 15rem;
+    object-fit: cover;
+}
+.noticia .contenido{
+    padding: 1rem;
+    font-family: "Sora";
+    color: white;
+    background-color: rgb(0, 0, 77);
+    border-radius: 0 0 10px 10px;
+    min-height: 7rem;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+.formulario >h2{
+    margin-bottom: 3rem;
+    text-align: center;
+    font-family: "Sora";
+    font-size: 2rem;
+}
+.formulario{
+    margin-top: 4rem;
+    color: white;
+    background-color: rgb(33, 31, 70);
+    padding: 1.5rem;
+    border-radius: 0.7rem;
+    min-height: 28rem;
+}
+.formulario > input{
+    width: 100%;
+    border-radius: 5px;
+    border: transparent;
+    margin-bottom: 2rem;
+    margin-top: 0.5rem;
+    padding: 1rem;
+}
+.formulario > input::placeholder{
+    font-family: "sora";
+    font-size: 1.5rem;
+}
+.formulario >textarea{
+    width: 100%;
+    border-radius: 5px;
+    border: transparent;
+    margin-bottom: 2rem;
+    margin-top: 0.5rem;
+    padding: 1rem;
+}
+.formulario > label{
+    font-family: "sora";
+    font-size: 1.5rem;
+}
+
+
+
+/* MEDIA QUERIES ------------------------------------ */
+/* NO CONSIGO HACER QUE MI LISTA DESPLEGABLE QUEDE BIEN */
+
+@media (min-width: 768px) {
+    section{
+        padding: 3rem;
+    }
+    #section1{
+        align-items: center;
+    }
+    #section1 img{
+        width: 30%;
+        margin: 0 auto;
+        align-items: center;
+        mask: linear-gradient(to top, transparent 0%, black 100%);
+        margin-left: 35%;
+    }
+    .titulo_principal{
+        font-size: 6rem;
+        
+    }
+    .titulo{
+        font-size: 3.5rem;
+    }
+    section > p{
+        font-size: 2rem;
+    }
+    .textoTarjeta > h1{
+        font-size: 2.5rem;
+    }
+    .textoTarjeta p{
+        font-size: 1.5rem;
+    }
+
+    .textoNoticias{
+        font-size: 2rem;
+    }
+    .contenido{
+        text-align: center;
+        font-size: 1.5rem;
+    }
+    .noticia img{
+        height: 25rem;
+    }
+    .formulario{
+        max-height: 80%;
+        margin: 0 auto;
+        max-width: 50%;
+    }
+}
